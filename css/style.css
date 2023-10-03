@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Whyte';
+    font-weight: 900;
+    src: url("../img/whyte-inktrap-super.woff2") format("woff2");
+  }
+
+html{
+    font-family: sans-serif;
+    color: white;
+    font-size: large;
+  }
+
+body {
+    background-color: #331142;
+    margin-top: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+h1 {
+    text-align: center;
+    font-size: 8vw;
+    color: #89279b;
+}
+
+hr.inv {
+    border: 6px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+  
+hr.inv2 {
+  border: 6px;
+  margin-top: 6em;
+  margin-bottom: 6em;
+}
+
+.content {
+    max-width: 800px;
+    align-content: center;
+}
+
+button {
+    display: inline-block;
+    background-color: #89279b;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 8px 0px;
+    width: 80px;
+  }
+  
+button:hover {
+  background-color: #cc3ae7;
+}
+
+.grid-content-3 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+    }
+
+
+@media screen and (max-width: 1200px) {
+    .grid-content-3 {
+        grid-template-columns: 1fr;
+    }
+}
+    
+
+@media screen and (max-width: 800px) {
+    body {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+    .grid-content-3 {
+        grid-template-columns: 1fr;
+    }
+}
