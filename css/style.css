@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'Whyte';
-    font-weight: 900;
-    src: url("../img/whyte-inktrap-super.woff2") format("woff2");
-  }
-
 html{
     font-family: sans-serif;
     color: white;
@@ -36,18 +30,37 @@ hr.inv2 {
 }
 
 .content {
-    max-width: 800px;
-    align-content: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.center {
+    display: flex; 
+    justify-content: center;  
+    align-items: center;
+}
+
+.avatar {
+    display: flex; 
+    justify-content: center;  
+    align-items: center;
+}
+
+.social:hover{
+    filter: invert(24%) sepia(51%) saturate(2301%) hue-rotate(267deg) brightness(91%) contrast(104%);
 }
 
 button {
     display: inline-block;
     background-color: #89279b;
     color: white;
+    font-size: large;
     border: none;
     border-radius: 40px;
     padding: 8px 0px;
-    width: 80px;
+    width: 240px;
+    height: 60px;
+    cursor: pointer;
   }
   
 button:hover {
@@ -61,10 +74,56 @@ button:hover {
     row-gap: 1em;
     }
 
+.gear-container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: .8em;
+    grid-auto-flow: row;
+    height: 400em; 
+    grid-template-areas: 
+    "item1 item2 item2 item3"
+    "item1 item4 item5 item5"
+    "item6 item7 item5 item5"
+    "item8 item8 item9 item10"; 
+  }
+
+.grid-img {
+    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.grid-img:hover { 
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02, 1.02);
+}
+
+
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+.item3 { grid-area: item3; }
+.item4 { grid-area: item4; }
+.item5 { grid-area: item5; }
+.item6 { grid-area: item6; }
+.item7 { grid-area: item7; }
+.item8 { grid-area: item8; }
+.item9 { grid-area: item9; }
+.item10 { grid-area: item10; }
+      
 
 @media screen and (max-width: 1200px) {
     .grid-content-3 {
         grid-template-columns: 1fr;
+    }
+    .content {
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
 }
     
@@ -74,7 +133,22 @@ button:hover {
         margin-left: 10vw;
         margin-right: 10vw;
     }
+
+    .content {
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
     .grid-content-3 {
         grid-template-columns: 1fr;
+    }
+
+    .gear-container {  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "item1 item2"
+        "item3 item4"
+        "item5 item6"
+        "item7 item8"
+        "item9 item10";
     }
 }
